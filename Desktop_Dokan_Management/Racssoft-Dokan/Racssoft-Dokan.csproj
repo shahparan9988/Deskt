@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBA5BBA4-9BA2-4D19-B1B7-BCEEF67A982B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Racssoft_Dokan</RootNamespace>
+    <AssemblyName>Racssoft-Dokan</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.15.4.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.15.4\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13.2\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainParent.Designer.cs">
+      <DependentUpon>MainParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainParent2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainParent2.Designer.cs">
+      <DependentUpon>MainParent2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AccountAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AccountAction.Designer.cs">
+      <DependentUpon>AccountAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AccountInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AccountInfo.Designer.cs">
+      <DependentUpon>AccountInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BalanceSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\BalanceSheet.Designer.cs">
+      <DependentUpon>BalanceSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BalanceSheet1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\BalanceSheet1.Designer.cs">
+      <DependentUpon>BalanceSheet1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BalanceSheetDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\BalanceSheetDetail.Designer.cs">
+      <DependentUpon>BalanceSheetDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Damaged.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Damaged.Designer.cs">
+      <DependentUpon>Damaged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Expenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Expenses.Designer.cs">
+      <DependentUpon>Expenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ExpenseTransactionHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ExpenseTransactionHistory.Designer.cs">
+      <DependentUpon>ExpenseTransactionHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FundTransactionHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\FundTransactionHistory.Designer.cs">
+      <DependentUpon>FundTransactionHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InventoryDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\InventoryDetails.Designer.cs">
+      <DependentUpon>InventoryDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InvoicePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\InvoicePayment.Designer.cs">
+      <DependentUpon>InvoicePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MainParent1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\MainParent1.Designer.cs">
+      <DependentUpon>MainParent1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Product.designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProductNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ProductNew.Designer.cs">
+      <DependentUpon>ProductNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\productMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\productMaterial.Designer.cs">
+      <DependentUpon>productMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Products.Designer.cs">
+      <DependentUpon>Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Products1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Products1.Designer.cs">
+      <DependentUpon>Products1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProfitCalculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ProfitCalculation.Designer.cs">
+      <DependentUpon>ProfitCalculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Return.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Return.Designer.cs">
+      <DependentUpon>Return.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Sale.designer.cs">
+      <DependentUpon>Sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SalesDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SalesDetails.Designer.cs">
+      <DependentUpon>SalesDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SalesPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SalesPayment.Designer.cs">
+      <DependentUpon>SalesPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SalesTransactionHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SalesTransactionHistory.Designer.cs">
+      <DependentUpon>SalesTransactionHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SerialKeyValidation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SerialKeyValidation.Designer.cs">
+      <DependentUpon>SerialKeyValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StoreTransactionHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\StoreTransactionHistory.Designer.cs">
+      <DependentUpon>StoreTransactionHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Suppliers.Designer.cs">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SuppliersRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SuppliersRecord.Designer.cs">
+      <DependentUpon>SuppliersRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VatCalculation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\VatCalculation.Designer.cs">
+      <DependentUpon>VatCalculation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VatManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\VatManage.Designer.cs">
+      <DependentUpon>VatManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VatPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\VatPayment.Designer.cs">
+      <DependentUpon>VatPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parent.Designer.cs">
+      <DependentUpon>Parent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainParent.resx">
+      <DependentUpon>MainParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainParent2.resx">
+      <DependentUpon>MainParent2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AccountAction.resx">
+      <DependentUpon>AccountAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AccountInfo.resx">
+      <DependentUpon>AccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\BalanceSheet.resx">
+      <DependentUpon>BalanceSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\BalanceSheet1.resx">
+      <DependentUpon>BalanceSheet1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\BalanceSheetDetail.resx">
+      <DependentUpon>BalanceSheetDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Damaged.resx">
+      <DependentUpon>Damaged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Expenses.resx">
+      <DependentUpon>Expenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ExpenseTransactionHistory.resx">
+      <DependentUpon>ExpenseTransactionHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\FundTransactionHistory.resx">
+      <DependentUpon>FundTransactionHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\InventoryDetails.resx">
+      <DependentUpon>InventoryDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\InvoicePayment.resx">
+      <DependentUpon>InvoicePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\MainParent1.resx">
+      <DependentUpon>MainParent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ProductNew.resx">
+      <DependentUpon>ProductNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\productMaterial.resx">
+      <DependentUpon>productMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Products.resx">
+      <DependentUpon>Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ProfitCalculation.resx">
+      <DependentUpon>ProfitCalculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Return.resx">
+      <DependentUpon>Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Sale.resx">
+      <DependentUpon>Sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SalesDetails.resx">
+      <DependentUpon>SalesDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SalesPayment.resx">
+      <DependentUpon>SalesPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SalesTransactionHistory.resx">
+      <DependentUpon>SalesTransactionHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SerialKeyValidation.resx">
+      <DependentUpon>SerialKeyValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\StoreTransactionHistory.resx">
+      <DependentUpon>StoreTransactionHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SuppliersRecord.resx">
+      <DependentUpon>SuppliersRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\VatCalculation.resx">
+      <DependentUpon>VatCalculation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\VatManage.resx">
+      <DependentUpon>VatManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\VatPayment.resx">
+      <DependentUpon>VatPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parent.resx">
+      <DependentUpon>Parent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{afc2cf0a-95d0-4d8f-925b-0ce383547c43}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DB\Racssoft-Dokan.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\RacsCom-01.png" />
+    <None Include="Resources\CellRacs-01 %282%291.png" />
+    <None Include="Resources\CellRacs-01 %282%29.png" />
+    <None Include="Resources\CellRacs-01 %281%29.png" />
+    <None Include="Resources\CellRacs-01.png" />
+    <None Include="Resources\Logo_mockup %281%29 %281%29ww.png" />
+    <None Include="Resources\Logo_mockup %281%29 %281%29.png" />
+    <None Include="Resources\CashRacs-02-0001 %281%292.png" />
+    <None Include="Resources\CashRacs-02-0001 %281%291.png" />
+    <None Include="Resources\CashRacs-02-0001 %281%29.png" />
+    <None Include="Resources\CashRacs-02-01 %281%29.png" />
+    <None Include="Resources\icons8-mail-24.png" />
+    <None Include="Resources\Logo_mockup %281%291.png" />
+    <None Include="Resources\Logo_mockup %281%29.png" />
+    <None Include="Resources\Capture.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

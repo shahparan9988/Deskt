@@ -1,0 +1,4 @@
+CashRacs Desktop Application v-1.0.0
+
+Product Description:
+Cash Register Management Offline Software Solution
